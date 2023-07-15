@@ -1,4 +1,4 @@
-# Audit the hack out of your data with just two annotations
+# Audit the hack out of your data using Spring data
 
 ## Introduction
 In this article, we will see how to audit changes to your data saved in a relational datastore (like Mysql, H2, etc) with JPA and @Auditable annotation. In this approach, we will have separate audit tables for each table we want to keep track of. The audit tables will have the same schema as the table we want to audit, with additional columns to track the changes. 
