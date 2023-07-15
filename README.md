@@ -14,7 +14,7 @@ Here are some reasons why organizations may choose to audit their data:
 4. To improve data management efficiency - Auditing can help identify areas where data management can improve. This can lead to more efficient use of resources and enhanced decision-making.
 5. To improve the quality of data reporting - Auditing can help to ensure that data reports are accurate and complete. This can improve the quality of decision-making based on the data.
 
-## Setup auditting
+## Setup auditing
 
 In this approach, we will use Spring data envers to audit the data. Spring data envers is a library that provides auditing capabilities for JPA-based repositories. It stores the audit information in a separate table that can reside in the same database. The library also offers APIs to query data from these audit tables. We will go over them in detail in the later sections.
 
