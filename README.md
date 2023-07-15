@@ -6,6 +6,7 @@ In this article, we will see how to audit changes to your data saved in a relati
 The audit tables will have the same name as those we want to audit with the suffix `_audit`. For example, if we want to audit the table `user`, then the audit table will be `user_audit`. The scope of the article is limited to auditing the modified data using JPA's; all manual updates to the database will not be tracked.
 
 ## Why audit data to begin with?
+![image](images/Audit.jpg)
 Here are some reasons why organizations may choose to audit their data:
 1. To ensure data accuracy - Auditing can help identify errors and inconsistencies in data, which can then get corrected. This is important for ensuring the data is reliable and can get used for decision-making.
 2. To identify potential fraud or misuse of data - Auditing can help identify patterns of activity that may indicate fraud or abuse of data. This can help to prevent financial losses and protect the integrity of the data.
@@ -17,7 +18,7 @@ Here are some reasons why organizations may choose to audit their data:
 
 In this approach, we will use Spring data envers to audit the data. Spring data envers is a library that provides auditing capabilities for JPA-based repositories. It stores the audit information in a separate table that can reside in the same database. The library also offers APIs to query data from these audit tables. We will go over them in detail in the later sections.
 
-The complete source code is available in the [github repository]()
+The complete source code is available in the [github repository](https://github.com/hariohmprasath/spring-audit-tables.git)
 
 ### Step 1: Add dependency
 
@@ -159,6 +160,7 @@ SELECT * FROM TODO_AUD;
 ```
 
 Here is the result:
+![image](images/Result.png)
 
 Here are some key points on the columns in the `TODO_AUD` table:
 * `ID` - Points to the id of the todo item in the `TODO` table
